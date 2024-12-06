@@ -667,7 +667,7 @@ footer hr {
     /* Estilo do contêiner do carrossel */
         .carousel-container {
             text-align: center;
-            margin: 4px auto;
+            margin: 15px auto;
             max-width: 320px;
             padding-bottom: 10px;
             /* Ajusta a largura do carrossel */
@@ -677,7 +677,8 @@ footer hr {
         .carousel-title {
             font-size: 15px;
             margin-bottom: 10px;
-            color: var(--cor-destaque);
+            color: var(--cor-06);
+            font-family: var(--fonte-secundaria);
         }
     
         /* Estilo do carrossel */
@@ -764,7 +765,7 @@ footer hr {
        margin-top: -10px;
        margin-bottom: 5px;
        justify-content: right;
-       font-size: 13px;
+       font-size: 14px;
    }
 
    .btn-ver:hover {
@@ -808,7 +809,7 @@ footer hr {
     }
 
     .foto {
-        width: calc(50% - -10.5rem);
+        width: calc(50% - -11.5rem);
     }
 
     .destinos h1 {
@@ -816,7 +817,7 @@ footer hr {
     }
 
     .card-destino p {
-        margin: 0.8rem -30px;
+        margin: 0.8rem -11px;
         font-size: 15px;
     }
 
@@ -854,11 +855,16 @@ footer hr {
 
         .valor {
             margin: 0.1rem auto;
+            padding-bottom: 2px
         }
 
         .avaliacoes p {
             font-size: 13px;
             text-align: center;
+        }
+
+        button {
+            margin: -5px;
         }
 
 }
