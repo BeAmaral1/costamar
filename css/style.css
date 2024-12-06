@@ -175,6 +175,7 @@ form label {
 form input {
     background-color: #ffffffd5;
     font-size: 0.9rem;
+    margin: 5px;
     width: 10%;
     padding: 0.5rem;
     border-radius: 0.3rem;
@@ -192,6 +193,7 @@ button {
     border-radius: 0.5rem;
     border: none;
     transition: 0.3s;
+    margin: -5px;
     animation: fadeIn 1.5s ease-in-out, slideIn 1s ease-in-out;
 }
 
@@ -289,7 +291,7 @@ video {
 
 .foto {
     width: calc(50% - 0.5rem);
-    height: 338px;
+    height: 312px;
     border: solid 0.6rem var(--cor-06);
     border-radius:  0.5rem;
     box-shadow:  0 0.3rem 0.4rem 0.1rem var(--cor-05);
@@ -370,14 +372,15 @@ video {
 .card-destino p {
     margin: 1rem 0;
     text-align: justify;
-    color: var(--cor-03);
+    /* color: var(--cor-03); */
 }
 
 .valor {
     display: flex;
     justify-content: end;
     align-items: baseline;
-    margin: 1rem auto;
+    margin: 0rem auto;
+    padding-bottom: 3px;
 }
 
 .valor div {
