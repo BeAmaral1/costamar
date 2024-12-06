@@ -1,0 +1,964 @@
+/* Importa as fontes Poppins e Lobster (Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+/* Definição de variáveis */
+:root {
+    /* Fontes */
+    --fonte-principal: "Poppins", sans-serif;
+    --fonte-secundaria: "Lobster", sans-serif;
+    --fonte-terceira: "Lato", sans-serif;
+
+    /* Paleta de cores */
+    --cor-principal: #747dff;
+    --cor-destaque: #ffad32;
+    --cor-principal-alpha: #747dff00;
+    --cor-gradiente-01: #ffe7c2;
+    --cor-gradiente-02: #bdacff;
+    --cor-01: #f9f9f9;
+    --cor-02: #b8c0c7;
+    --cor-03: #767f86;
+    --cor-04: #3c4852;
+    --cor-05: #00000043;
+    --cor-06: #edaa25;
+    --cor-07: #68cdf2;
+    --cor-08: rgba(0, 123, 255, 0.774);
+
+    /* Box shadow */
+    --sombra: 0 0.3rem 0.4rem 0.1rem var(--cor-05);
+}
+
+/* Limpa as configurações padrão dos navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-family: var(--fonte-principal);
+    font-size: 17px;
+}
+
+body {
+    color: var(--cor-04);
+}
+
+/* <!-- ===== Barra de navagação fixa, com Menu ===== --> */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Ou space-between */
+    align-items: center;
+    transition: background-color 0.5s ease;
+    background-color: var(--cor-principal-alpha);
+    padding: 0.6rem 3rem;
+    color:  var(--cor-01);
+    letter-spacing: 0.1rem;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+
+.navbar-solida {
+    background-color: var(--cor-06);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.37);
+}
+
+.logo-costa-mar img{
+    max-width: 240px;
+    padding-right: 10px;
+    margin-top: 5px;
+    animation: fadeIn 1.5s ease-in-out, slideIn 1s ease-in-out;
+}
+
+.menu a, .drop-content a {
+    text-decoration: none;
+    color: var(--cor-01);
+    font-weight: 500;
+    padding: 0.5rem 0.8rem;
+    font-size: 13px;
+    transition: 0.5s;
+    animation: fadeIn 1.5s ease-in-out, slideIn 1s ease-in-out;
+}
+
+.menu a:hover, .drop-content a:hover {
+    color: var(--cor-05);
+}
+
+/* <!-- ===== Banner e Calendário ===== --> */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url('../img/praia22.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 50vh;
+}
+
+header div {
+    width: 100%;
+}
+
+.titulo h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--cor-01);
+    margin-top: 100px;
+    font-family: var(--fonte-principal);
+    animation: fadeIn 1.5s ease-in-out, slideIn 1s ease-in-out;
+}
+
+.titulo p {
+    text-align: center;
+    font-size: 22px;
+    color: #ffffff;
+    animation: fadeIn 1.5s ease-in-out, slideIn 1s ease-in-out;
+}
+
+.titulo strong {
+    color: var(--cor-destaque);
+    animation: fadeIn 1.5s ease-in-out, slideIn 1s ease-in-out;
+}
+
+.pesquisar {
+    padding: 0.8rem 3rem;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out, slideIn 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.pesquisar input:hover {
+    background-color: #68cdf26b;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.pesquisar form {
+    background-color: var(--cor-01);
+    color: var(--cor-03);
+    padding: 1rem 1.4rem;
+    display: flex;
+    align-items: end;
+    border-radius: 0.2rem;
+    animation: fadeIn 1.5s ease-in-out, slideIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+form label {
+    display: flex;
+}
+
+form input {
+    background-color: #ffffffd5;
+    font-size: 0.9rem;
+    width: 10%;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    outline: none;
+    border: none;
+    font-family: var(--fonte-principal);
+}
+
+button {
+    background-color: var(--cor-destaque);
+    color: var(--cor-01);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.6rem 1.6rem;
+    border-radius: 0.5rem;
+    border: none;
+    transition: 0.3s;
+    animation: fadeIn 1.5s ease-in-out, slideIn 1s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--cor-07);
+    cursor: pointer;
+    animation: fadeIn 1.5s ease-in-out, slideIn 1s ease-in-out;
+}
+
+section {
+    margin: 1.5rem auto;
+    padding: 6rem 3rem;
+    min-height: 100vh;
+    animation: fadeIn 1.5s ease-in-out, slideIn 1s ease-in-out;
+}
+
+/* <!-- ===== Section Passeios ===== --> */
+.passeios {
+    display: flex;
+    animation: fadeIn 1.5s ease-in-out, slideIn 1s ease-in-out;
+}
+
+.passeios h1 {
+    font-family:  var(--fonte-secundaria);
+    color: var(--cor-07);
+    animation: fadeIn 1.5s ease-in-out, slideIn 1s ease-in-out;
+}
+
+.passeios hr {
+    margin: 1rem 0;
+    border: solid var(--cor-destaque);
+    border-radius: 1rem;
+    width: 15rem;
+    animation: fadeIn 1.5s ease-in-out, slideIn 1s ease-in-out;
+}
+
+.passeios p {
+    margin: 1rem 0;
+    animation: fadeIn 1.5s ease-in-out, slideIn 1s ease-in-out;
+}
+
+.info-passeio {
+    text-align: justify;
+    padding-right: 3rem;
+    flex: 1;
+    animation: fadeIn 1.5s ease-in-out, slideIn 1s ease-in-out;
+}
+
+.container-botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1.5s ease-in-out, slideIn 1s ease-in-out;
+}
+
+.botao-assista {
+    background-color: var(--cor-destaque);
+    color: var(--cor-01);
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 0.6rem 1.6rem;
+    min-width: 200px;
+    border-radius: 0.5rem;
+    border: none;
+    transition: 0.3s;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out, slideIn 1s ease-in-out;
+}
+
+.botao-assista:hover {
+    background-color: var(--cor-07);
+    cursor: pointer;
+}
+
+.video-container {
+    max-width: 950px;
+    margin: 20px auto;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out, slideIn 1s ease-in-out;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.fotos-passeios {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    flex: 1;
+}
+
+.foto {
+    width: calc(50% - 0.5rem);
+    height: 338px;
+    border: solid 0.6rem var(--cor-06);
+    border-radius:  0.5rem;
+    box-shadow:  0 0.3rem 0.4rem 0.1rem var(--cor-05);
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+/* <!-- ===== section: Destinos ===== --> */
+.destinos {
+    background:  linear-gradient(
+        50deg,
+        var(--cor-06),
+        var(--cor-07)
+    );
+}
+
+.stars-fixed {
+    display: flex;
+    color: #f5c518;
+    animation: fadeIn 1.5s ease-in-out, slideIn 1s ease-in-out;
+    justify-content: right;
+}
+
+.stars-fixed span {
+    margin-right: 0.3rem;
+}
+
+.stars-fixed h4 {
+    margin-top: 2px;
+    margin-left: 2px;
+    color: black;
+}
+
+.destinos h1 {
+    font-family: var(--fonte-secundaria);
+    text-align: center;
+    padding-bottom: 1rem;
+    color: white;
+    z-index: 5;
+    font-weight: 400;
+}
+
+.grupo-destinos {
+    padding: 0.3rem;
+   display: grid;
+   grid-template-columns: auto auto auto;
+   gap: 3rem 1.2rem;
+}
+
+.card-destino {
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-01);
+    border-radius: 0.5rem;
+    box-shadow: var(--sombra);
+}
+
+.card-destino img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.3rem;
+}
+
+.card-destino > div {
+    padding: 1rem;
+}
+
+.card-destino span {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.card-destino p {
+    margin: 1rem 0;
+    text-align: justify;
+    color: var(--cor-03);
+}
+
+.valor {
+    display: flex;
+    justify-content: end;
+    align-items: baseline;
+    margin: 1rem auto;
+}
+
+.valor div {
+    display: flex;
+    justify-content: start;
+    align-items: end;
+}
+
+.valor span {
+    /* text-decoration: line-through; */
+    font-size: 0.8rem;
+    color: var(--cor-03);
+    margin-left: 0.5rem;
+}
+
+.card-btn {
+    text-align: right;
+}
+
+/* <!-- ===== Avaliações ===== --> */
+.avaliacoes {
+    text-align: center;
+    width: 75%;
+    min-height: 50vh;
+    margin: 1rem auto;
+    padding: 4rem 3rem 2rem;
+}
+
+.avaliacoes h1 {
+    font-family:  var(--fonte-secundaria);
+    color: var(--cor-07);
+}
+
+.avaliacoes p {
+    margin: 1rem auto;
+    color: var(--cor-03);
+}
+
+.avaliacoes img {
+    border: solid 0.2rem var(--cor-destaque);
+    border-radius: 50%;
+    background-color: var(--cor-destaque);
+    outline: none;
+    width: 10rem;
+}
+
+.avaliacoes span {
+    font-weight: 700;
+}
+
+.carrossel {
+    position: relative;
+    padding: 0 5rem;
+    margin: auto;
+}
+
+.carrossel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--cor-05);
+    color: var(--cor-01);
+    cursor: pointer;
+    border: none;
+    padding: 0.5rem;
+    transition: 0.3s;
+}
+
+.carrossel button:hover {
+    background-color: var(--cor-03);
+}
+
+.anterior {
+    left: 0;
+}
+
+.proximo {
+    right: 0;
+}
+
+/* <!-- ===== Rodapé ===== --> */
+footer {
+    background-color: var(--cor-06);
+    color: white;
+    padding: 2rem 5rem;
+    display: flex;
+    font-size: 0.8rem;
+}
+
+footer div {
+    flex: 1;
+    padding: 0 0.3rem;
+}
+
+footer h3 {
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+footer .input-group {
+    display: flex;
+    gap: 0.5rem;
+    margin: 1rem 0 1.5rem;
+}
+
+footer input {
+    background-color: var(--cor-01);
+    color: var(--cor-04);
+    letter-spacing: 0.1rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.1rem;
+    width: 100%;
+}
+
+footer button {
+    padding: 0.3rem 1.4rem;
+    border-radius: 0.3rem;
+}
+
+footer hr {
+    margin: 1rem 0;
+}
+
+.empresa p {
+    margin: 2rem 0;
+}
+
+.empresa span {
+    font-weight: 700;
+    display: block;
+}
+
+.rede-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.rede-social i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.2rem;
+    border: solid 0.15rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.rede-social i:hover {
+    color: white;
+    border-color: var(--cor-07);
+    background-color: var(--cor-07);
+}
+
+.rodape {
+    width: 100%;
+    height: 3rem;
+    background-color: var(--cor-06);
+}
+
+/* Menu Hmaburguer */
+.drop-menu {
+    padding: 0.5rem 0.5rem;
+    cursor: pointer;
+}
+
+.drop-button {
+    padding: 0;
+    padding-bottom: 0.25rem;
+    background-color: inherit;
+}
+
+.barra {
+    width: 2rem;
+    height: 0.28rem;
+    transition: 0.3s;
+    margin-top: 0.3rem;
+    border-radius: 0.2rem;
+    background-color: var(--cor-01);
+}
+
+.drop-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 3.2rem;
+    right: 0px;
+    border-radius: 3px;
+}
+
+.drop-content a {
+    display: block;
+}
+
+.drop-content a:hover {
+    color: var(--cor-05);
+}
+
+.drop-menu:hover .drop-content {
+    display: block;
+}
+
+.btn-whatsapp {
+    position: fixed;
+    bottom: 14px;
+    left: 24px;
+    z-index: 99;
+}
+
+.btn-whatsapp img {
+    max-width: 65px;
+    transition: transform 0.4s;
+}
+
+.btn-whatsapp img:hover {
+    transform: scale(1.1);
+}
+
+/* Estilo para o botão "Back to Top" */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--cor-07);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    cursor: pointer;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-top i {
+    font-size: 18px;
+}
+
+.back-to-top:hover {
+    background-color: var(--cor-06);
+    transform: scale(1.1);
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Media Queries */
+
+/* Extra Small (xs): Smartphone (portrait - retrato) */
+@media (min-width: 0px) {
+    nav {
+        padding: 0;
+        padding-left: 1rem;
+    }
+
+    .drop-content {
+        background-color: var(--cor-06);
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .drop-menu {
+        display: block;
+    }
+
+    
+
+
+}
+
+/* Small (sm): Smartphone (landscape - paisagem) */
+@media (max-width: 576px) {
+
+    /* Estilo do contêiner do carrossel */
+        .carousel-container {
+            text-align: center;
+            margin: 4px auto;
+            max-width: 320px;
+            padding-bottom: 10px;
+            /* Ajusta a largura do carrossel */
+        }
+    
+        /* Título acima do carrossel */
+        .carousel-title {
+            font-size: 15px;
+            margin-bottom: 10px;
+            color: var(--cor-destaque);
+        }
+    
+        /* Estilo do carrossel */
+        .carousel {
+            position: relative;
+            width: 300px;
+            height: 155px;
+            overflow: hidden;
+            border-radius: 10px;
+            border: 2px solid var(--cor-principal-alpha);
+            margin: 0 auto;
+        }
+    
+        /* Faixa de imagens */
+        .carousel-track {
+            display: flex;
+            width: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+    
+        /* Estilo das imagens */
+        .carousel-track img {
+            width: 300px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+    section {
+        padding: 1rem 1rem;
+    }
+
+    .titulo h1{
+        font-size: 24px;
+        margin-top: 84px;
+    }
+
+    .titulo p {
+        display: none;    
+    }
+
+   form input {
+        display: none; 
+   }
+
+   .form label {
+    display: none;
+   }
+
+   .pesquisar {
+    display: none;
+   }
+
+   .pesquisar form {
+    display: none;
+   }
+
+   .info-passeio {
+       padding-right: 0;
+   }
+
+   .passeios h1 {
+    font-size: 20px;
+   }
+
+    .passeios {
+        flex-direction: column;
+    }
+
+   .info-passeio p {
+       max-height: 100px;
+        overflow: hidden;
+       transition: max-height 0.3s ease;
+        font-size: 14px;
+   }
+
+   .info-passeio.expanded p {
+       max-height: 1000px;
+   }
+
+   .btn-ver {
+       cursor: pointer;
+       display: flex;
+       color: var(--cor-destaque);
+       margin-top: -10px;
+       margin-bottom: 5px;
+       justify-content: right;
+       font-size: 13px;
+   }
+
+   .btn-ver:hover {
+       color: var(--cor-07);
+   }
+
+   .logo-costa-mar img {
+    max-width: 180px;
+    padding-right: 5px;
+   }
+
+    .grupo-destinos {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+        .avaliacoes {
+        width: 100%;
+    }
+
+    .carrossel {
+        padding: 0;
+    }
+
+        footer {
+        padding: 2rem;
+        flex-direction: column; 
+    }
+
+        footer h3 {
+        margin-top: 2rem;
+    }
+
+        .empresa p {
+        margin: 1rem 0;
+    }
+
+    .fotos-passeios {
+        gap: 2rem;
+    }
+
+    .foto {
+        width: calc(50% - -10.5rem);
+    }
+
+    .destinos h1 {
+        padding-top: 4px;
+    }
+
+    .card-destino p {
+        margin: 0.8rem -30px;
+        font-size: 15px;
+    }
+
+    .card-destino span {
+        font-size: 14px;
+        }
+
+        .card-destino {
+            padding: 1.5rem; 
+        }
+
+        .card-destino img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .btn-whatsapp img {
+            max-width: 55px; 
+        }
+
+        .stars-fixed span {
+            margin-right: 0.3rem;
+        }
+
+        .stars-fixed h4 {
+            margin-top: -2px;
+            margin-left: 2px;
+            color: black;
+        }
+
+        .stars-fixed {
+            padding-right: 10px;
+            padding-top: 10px;
+        }
+
+        .valor {
+            margin: 0.1rem auto;
+        }
+
+        .avaliacoes p {
+            font-size: 13px;
+            text-align: center;
+        }
+
+}
+
+/* Medium (md): Tablet */
+@media (min-width: 768px) {
+    section {
+        padding: 6rem 4rem;
+    }
+
+    .grupo-destinos {
+        padding: 0;
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 3rem 1.2rem;
+    }
+
+    footer {
+        padding: 2rem 6rem;
+    }
+}
+
+/* Large (lg) Notebook */
+@media (min-width: 992px) {
+    .menu {
+        display: block;
+    }
+
+    .drop-menu {
+        display: none;
+    }
+
+    .titulo {
+        font-size: 1.5rem;
+    }
+
+    form input {
+        width: 45%;
+    }
+
+    section {
+        padding: 3rem 3rem;
+    }
+
+    .passeios {
+        flex-direction: row;
+    }
+
+    .info-passeio {
+        padding-right: 3rem;
+    }
+
+    .avaliacoes {
+        width: 75%;
+    }
+
+    footer {
+        flex-direction: row;
+    }
+
+    footer h3 {
+        margin-top: 0;
+    }
+}
+
+/* Extra Large (xl): Desktop */
+@media (min-width: 1200px) {
+    .grupo-destinos {
+        grid-template-columns: auto auto auto;
+    }
+
+    .carrossel {
+        padding: 0 5rem;
+    }
+
+         .carousel-container {
+             display: none;
+         }
+    
+         .carousel-title {
+             display: none;
+         }
+    
+         .carousel {
+             display: none;
+         }
+    
+         .carousel-track {
+             display: none;
+         }
+    
+         .carousel-track img {
+             display: none;
+         }
+    
+         .btn-ver {
+             display: none;
+         }
+    
+         .btn-ver:hover {
+             display: none;
+         }
+}
