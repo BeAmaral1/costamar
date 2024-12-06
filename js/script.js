@@ -1,18 +1,42 @@
 // Muda a cor da navbar quando estiver sobre a div booking 
+// window.addEventListener('scroll', alterarCorNavbar);
+
+// function alterarCorNavbar() {
+//     const navbar = document.querySelector('nav');
+//     const booking = document.querySelector('.pesquisar');
+//     const bookingRect = booking.getBoundingClientRect();
+
+//     if (bookingRect.top < 50) {
+//         navbar.classList.add('navbar-solida');
+
+//     } else {
+//         navbar.classList.remove('navbar-solida');
+//     }
+// }
+
+
+// Muda a cor da navbar quando estiver sobre a div booking ou slides
 window.addEventListener('scroll', alterarCorNavbar);
 
 function alterarCorNavbar() {
     const navbar = document.querySelector('nav');
     const booking = document.querySelector('.pesquisar');
-    const bookingRect = booking.getBoundingClientRect();
+    const slides = document.querySelector('.carousel');
+    
+    // Verifica qual elemento usar baseado no tamanho da tela
+    const targetElement = window.innerWidth <= 768 ? slides : booking;
 
-    if (bookingRect.top < 50) {
-        navbar.classList.add('navbar-solida');
+    if (targetElement) {
+        const targetRect = targetElement.getBoundingClientRect();
 
-    } else {
-        navbar.classList.remove('navbar-solida');
+        if (targetRect.top < 50) {
+            navbar.classList.add('navbar-solida');
+        } else {
+            navbar.classList.remove('navbar-solida');
+        }
     }
 }
+
 
 // Carrossel
 const clientes = document.querySelectorAll('.cliente');
